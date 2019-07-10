@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head> 
+		<title>PaperSalvo</title>
+		<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="game.css">
+	</head>
+	<body onLoad='cargoPag()' class="paper"> 
+	
+		<div class="container-fluid">
+		
+			<div id="app">
+				<div class="row">
+					<div class="col-lg-2" style="text-align:left">
+						<button onclick='logout()' class="btn-small">Logout</button>
+						<h3><strong>Game: {{game}}</strong></h3>
+					</div>
+					<div class="col-lg-8" style="text-align:center">
+						<h3><strong>{{state}}</strong></h3>
+					</div>
+					<div class="col-lg-2" style="text-align:right">
+						<button onclick="location.href='games.html'" class="btn-small">Back</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-5" style="text-align:center">
+						<div>
+							<button id="agregaBarcos" onclick="addShip()" class="btn btn-primary btn-sm">Post Ships</button>
+						</div>
+						<table>
+							<tr>
+								<th v-for="item in number">{{item}}</th>					
+							</tr>
+							<tr v-for="item in letter" id="barcos">
+								<td>{{item}}</td>
+								<td v-for="item in letter" name="casilla" class="border border-5 border-secondary"></td>
+							</tr> 
+						</table>
+					</div>
+					<div class="col-lg-2" style="text-align:center">	
+							<div id="trazo">
+								<div><h5>Select each Boat</h5></div>
+								<div class="margen"><button onclick="creoBarcos(2,'PatrolBoat')" id="PatrolBoat" class="btn btn-secondary btn-sm">PatrolBoat 2</button></div>
+								<div class="margen"><button onclick="creoBarcos(3,'Submarine')" id="Submarine" class="btn btn-secondary btn-sm">Submarine 3</button></div>
+								<div class="margen"><button onclick="creoBarcos(3,'BattleShip')" id="BattleShip" class="btn btn-secondary btn-sm">BattleShip 3</button></div>
+								<div class="margen"><button onclick="creoBarcos(4,'Destroyer')" id="Destroyer" class="btn btn-secondary btn-sm">Destroyer 4</button></div>
+								<div class="margen"><button onclick="creoBarcos(5,'AircraftCarrier')" id="AircraftCarrier" class="btn btn-secondary btn-sm">AirCraftCarrier 5</button></div>
+								<div><h5>Or click...</h5></div>
+								<div class="margen"><button onclick="barcosAlAzar()" id="Random" class="btn btn-success btn-sm">Random Boats</button></div>
+							</div>
+					</div>	
+					<div class="col-lg-5" style="text-align:center">
+						<div>
+							<button id="agregaSalvoes" onclick='creoSalvos()' class="btn btn-primary btn-sm">Submit Salvo</button>
+						</div>
+						<table>
+							<tr >
+								<th v-for="item in number">{{item}}</th>					
+							</tr>
+							<tr v-for="item in letter">
+								<td>{{item}}</td>
+								<td v-for="item in letter" name="casilla" class="border border-5 border-secondary"></td>
+							</tr> 
+						</table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-5" style="text-align:center">
+					<div>
+						<h4>Your Hits</h4>
+					</div>
+						<table id="playerHistory">
+							<tr>
+								<th colspan="2" style="background-color:lightgray">PatBoat</th>
+								<th colspan="3" style="background-color:lightgray">BattleShip</th>
+								<th colspan="3" style="background-color:lightgray">Submarine</th>
+								<th colspan="4" style="background-color:lightgray">Destroyer</th>
+								<th colspan="5" style="background-color:lightgray">AirCraftCarrier</th>
+							</tr>
+							<tr id="player1">
+								<td></td><td></td>
+								<td></td><td></td><td></td>
+								<td></td><td></td><td></td>
+								<td></td><td></td><td></td><td></td>
+								<td></td><td></td><td></td><td></td><td></td>
+							</tr>
+							<tr>
+								<td colspan="2" id="ppb" style="background-color:lightgray"></td>
+								<td colspan="3" id="pbs" style="background-color:lightgray"></td>
+								<td colspan="3" id="psub" style="background-color:lightgray"></td>
+								<td colspan="4" id="pdest" style="background-color:lightgray"></td>
+								<td colspan="5" id="pair" style="background-color:lightgray"></td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-lg-2">
+					</div>
+					<div class="col-lg-5" style="text-align:center">
+						<div>
+							<h4>Rival Hits</h4>
+						</div>
+							<table>
+								<tr>
+									<th colspan="2" style="background-color:lightgray">PatBoat</th>
+									<th colspan="3" style="background-color:lightgray">BattleShip</th>
+									<th colspan="3" style="background-color:lightgray">Submarine</th>
+									<th colspan="4" style="background-color:lightgray">Destroyer</th>
+									<th colspan="5" style="background-color:lightgray">AirCraftCarrier</th>
+								</tr>
+								<tr id="rival">
+									<td></td><td></td>
+									<td></td><td></td><td></td>
+									<td></td><td></td><td></td>
+									<td></td><td></td><td></td><td></td>
+									<td></td><td></td><td></td><td></td><td></td>
+								</tr>
+								<tr>
+									<td colspan="2" id="rpb" style="background-color:lightgray"></td>
+									<td colspan="3" id="rbs" style="background-color:lightgray"></td>
+									<td colspan="3" id="rsub" style="background-color:lightgray"></td>
+									<td colspan="4" id="rdest" style="background-color:lightgray"></td>
+									<td colspan="5" id="rair" style="background-color:lightgray"></td>
+								</tr>
+							</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</body>
+	
+	
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script src="game.js"></script>
+	
+	
+
+	</body>
+</html>

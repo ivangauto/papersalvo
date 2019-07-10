@@ -1,0 +1,172 @@
+[ [ {
+  "GameId" : 1,
+  "GameCreationDate" : "2019-05-31T00:30:35.465949",
+  "GamePlayersInfo" : [ ]
+}, {
+  "GameId" : 2,
+  "GameCreationDate" : "2019-05-31T01:30:35.544071",
+  "GamePlayersInfo" : [ ]
+}, {
+  "GameId" : 3,
+  "GameCreationDate" : "2019-05-31T02:30:35.544071",
+  "GamePlayersInfo" : [ ]
+}, {
+  "GameId" : 4,
+  "GameCreationDate" : "2019-05-31T00:30:35.544071",
+  "GamePlayersInfo" : [ {
+    "GamePlayerId" : 2,
+    "PlayerInfo" : "paul1@paul1.com",
+    "Score" : 0.0
+  }, {
+    "GamePlayerId" : 1,
+    "PlayerInfo" : "john1@john1.com",
+    "Score" : 1.0
+  } ]
+}, {
+  "GameId" : 5,
+  "GameCreationDate" : "2019-05-31T02:30:35.544071",
+  "GamePlayersInfo" : [ {
+    "GamePlayerId" : 3,
+    "PlayerInfo" : "paul1@paul1.com",
+    "Score" : 0.5
+  }, {
+    "GamePlayerId" : 4,
+    "PlayerInfo" : "george1@george1.com",
+    "Score" : 0.5
+  } ]
+}, {
+  "GameId" : 6,
+  "GameCreationDate" : "2019-05-31T03:30:35.544071",
+  "GamePlayersInfo" : [ {
+    "GamePlayerId" : 6,
+    "PlayerInfo" : "asd@234.com",
+    "Score" : 1.0
+  }, {
+    "GamePlayerId" : 5,
+    "PlayerInfo" : "george1@george1.com",
+    "Score" : 0.0
+  } ]
+}, {
+  "GameId" : 7,
+  "GameCreationDate" : "2019-05-31T04:30:35.544071",
+  "GamePlayersInfo" : [ {
+    "GamePlayerId" : 7,
+    "PlayerInfo" : "asd@234.com",
+    "Score" : 0.5
+  }, {
+    "GamePlayerId" : 8,
+    "PlayerInfo" : "zxc@543.com",
+    "Score" : 0.5
+  } ]
+}, {
+  "GameId" : 8,
+  "GameCreationDate" : "2019-05-31T05:30:35.544071",
+  "GamePlayersInfo" : [ {
+    "GamePlayerId" : 10,
+    "PlayerInfo" : "lkj@456.com"
+  }, {
+    "GamePlayerId" : 9,
+    "PlayerInfo" : "zxc@543.com"
+  } ]
+}, {
+  "GameId" : 9,
+  "GameCreationDate" : "2019-05-31T06:30:35.544071",
+  "GamePlayersInfo" : [ {
+    "GamePlayerId" : 12,
+    "PlayerInfo" : "gtgt@135.com"
+  }, {
+    "GamePlayerId" : 11,
+    "PlayerInfo" : "lkj@456.com"
+  } ]
+}, {
+  "GameId" : 10,
+  "GameCreationDate" : "2019-05-31T07:30:35.544071",
+  "GamePlayersInfo" : [ {
+    "GamePlayerId" : 14,
+    "PlayerInfo" : "john1@john1.com"
+  }, {
+    "GamePlayerId" : 13,
+    "PlayerInfo" : "gtgt@135.com"
+  } ]
+}, {
+  "GameId" : 11,
+  "GameCreationDate" : "2019-05-31T10:30:35.544071",
+  "GamePlayersInfo" : [ {
+    "GamePlayerId" : 15,
+    "PlayerInfo" : "zxc@543.com"
+  }, {
+    "GamePlayerId" : 16,
+    "PlayerInfo" : "paul1@paul1.com"
+  } ]
+}, {
+  "GameId" : 12,
+  "GameCreationDate" : "2019-05-31T11:30:35.544071",
+  "GamePlayersInfo" : [ {
+    "GamePlayerId" : 17,
+    "PlayerInfo" : "asd@234.com"
+  } ]
+} ], [ {
+  "PlayerId" : 1,
+  "UserName" : "Jack@Bauer",
+  "Scores" : [ ]
+}, {
+  "PlayerId" : 2,
+  "UserName" : "Chloe@Brian",
+  "Scores" : [ ]
+}, {
+  "PlayerId" : 3,
+  "UserName" : "Kim@Bauer",
+  "Scores" : [ ]
+}, {
+  "PlayerId" : 4,
+  "UserName" : "David@Palmer",
+  "Scores" : [ ]
+}, {
+  "PlayerId" : 5,
+  "UserName" : "Michelle@Dessler",
+  "Scores" : [ ]
+}, {
+  "PlayerId" : 6,
+  "UserName" : "john1@john1.com",
+  "Scores" : [ {
+    "Score" : 1.0
+  } ]
+}, {
+  "PlayerId" : 7,
+  "UserName" : "paul1@paul1.com",
+  "Scores" : [ {
+    "Score" : 0.5
+  }, {
+    "Score" : 0.0
+  } ]
+}, {
+  "PlayerId" : 8,
+  "UserName" : "george1@george1.com",
+  "Scores" : [ {
+    "Score" : 0.0
+  }, {
+    "Score" : 0.5
+  } ]
+}, {
+  "PlayerId" : 9,
+  "UserName" : "asd@234.com",
+  "Scores" : [ {
+    "Score" : 1.0
+  }, {
+    "Score" : 0.5
+  } ]
+}, {
+  "PlayerId" : 10,
+  "UserName" : "zxc@543.com",
+  "Scores" : [ {
+    "Score" : 0.5
+  } ]
+}, {
+  "PlayerId" : 11,
+  "UserName" : "lkj@456.com",
+  "Scores" : [ ]
+}, {
+  "PlayerId" : 12,
+  "UserName" : "gtgt@135.com",
+  "Scores" : [ ]
+} ] ]

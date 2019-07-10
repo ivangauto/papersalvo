@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+	<head> 
+		
+		<title>Salvo!</title>
+	 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		
+		<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css">
+		<link rel="stylesheet" type="text/css" href="games.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+	</head>
+	<body onload="information()" class="paper">
+		<div>
+		<div id="app">
+			<div class="row flex-middle">
+				<div class="col col-lg-3">
+					<div id="loginstatus"></div>
+				</div>
+				<div class="col col-lg-6" style="text-align:center">
+					<h2><strong>PaperSalvo</strong></h2>
+				</div>
+				<div class="col col-lg-3" style="text-align:right">
+					<button onclick="createGame()" class="btn-secondary">New Game</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-lg-12">
+					<h3><strong>LeaderBoard</strong></h3>
+						<table class="table-hover">
+							<tr>
+								<th>Player</th>
+								<th>Score</th>
+								<th class="d-none d-sm-table-cell">Won</th>
+								<th class="d-none d-sm-table-cell">Tied</th>
+								<th class="d-none d-sm-table-cell">Lost</th>
+							</tr>
+							<tr v-for="item in leader">
+								<td>{{item.player}}</td>
+								<td>{{item.score}}</td>
+								<td class="d-none d-sm-table-cell">{{item.won}}</td>
+								<td class="d-none d-sm-table-cell">{{item.tie}}</td>
+								<td class="d-none d-sm-table-cell">{{item.lost}}</td>
+							</tr>
+						</table> 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-lg-12">
+					<h3><strong>Games information</strong></h3>
+					<table class="table" style="color:#0f2d8c">
+						<thead class="table-hover">
+							<tr>
+								<th>Game Id</th>
+								<th class="d-none d-lg-table-cell">Creation Date</th>
+								<th>Players</th>
+							</tr>
+						</thead>
+						<tr v-for="item in list">
+							<td><a :href="item.Link" class="btn btn-primary">{{item.GameId}}</a></td>
+							<td  class="d-none d-lg-table-cell">{{item.GameCreationDate}}</td>
+							<td>{{item.GamePlayersInfo}}</td>
+							<td v-if=(item.login)><button v-on:click=joinGame(item.GameId) class="btn-warning">Join</button></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-lg-12">
+					<h3><strong>Scores per game</strong></h3>
+					<ul v-for= "item in detail" style="display:inline-table">
+						<li>{{item.player1}}</li>
+						<li>{{item.player2}}</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-lg-12" style="text-align:right">
+					<p>By Ivan Gauto</p>
+				</div>
+			</div>
+				
+					
+<!-- 		<pre id="output"></pre> -->
+			</div>
+	
+	
+			<script src="https://unpkg.com/vue"></script>
+			<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+			<script src="games.js"></script>
+		</div>
+	</body>
+</html>

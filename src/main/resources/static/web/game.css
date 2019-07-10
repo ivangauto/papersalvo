@@ -1,0 +1,176 @@
+body{
+	opacity: 0;
+	
+}
+
+/* body {
+   background: -webkit-linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   background: -moz-linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   background: -ms-linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   background: -o-linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   background: linear-gradient(top, rgb(136,199,201) 58%, rgb(202,232,235) 100%);
+   padding: 3%;
+   height: 94%;
+} */
+
+ .paper {
+  font: normal 17px/1.5 "Lucida Grande", arial, sans-serif;
+   width: 100%;
+  height: 100%; 
+  margin: 0 auto;
+/*   padding: 6px 5px 4px 42px; */
+  position: relative;
+  color: #0f2d8c;
+  line-height: 20px;
+  border: 1px solid white;
+  background: #fff;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+  background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -moz-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -ms-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -o-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  -webkit-background-size: 100% 20px;
+  -moz-background-size: cover;
+  /* -ms-background-size: 100% 20px; */
+  -o-background-size: cover;
+  background-size: 100% 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+ 
+}
+
+.paper::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  top: 0;
+  left: 25px;
+  bottom: 0;
+  border: 1px solid;
+  border-color: transparent #ed1c1c;
+  
+ 
+}
+
+ 
+
+td, th{
+	border:1px solid black; 
+	 width:37px; 
+	height:37px; 
+	text-align:center;
+	padding:0px;
+
+}
+
+
+
+table, p{
+	display: inline;
+}
+
+
+#player1 td, #rival td{
+	border-radius: 50%;
+	background-color: lightgray;
+	border: none;
+	height: 32px;
+	
+	font-size: 68%;
+	color: white;
+	
+}
+
+#player1 tr, #rival tr{
+	height: 27px;
+}
+
+#player1, #rival{
+	width: 100%;
+	font-size: 12pt;
+}
+
+.margen{
+	margin-bottom: 1.2em;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #000;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
+}
+
+
+.bullet{
+	border-radius: 20%;
+	color: white;
+	 /* background-color: #7c9615;  */
+	background:transparent;
+	width: 100%;
+	height: 100%;	
+
+
+}
+
+.bullet1{
+	border-radius: 20%;
+	color: white;
+	background-color: none;
+	width: 100%;
+	height: 100%;	
+}
